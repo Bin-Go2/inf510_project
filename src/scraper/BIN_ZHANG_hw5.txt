@@ -1,0 +1,60 @@
+**Note:
+Hi Grader,
+    Due to my project aim(analyze relationship between city's GDP and flight numbers), I have to scrape some large dataset and it may take several hours to complete the task, so I asked professor what I should do. He said I can use a pretty small dataset scraping to show my scraping ability and let me explain it to you when submitting my homework. Here is the modification about my scraping example:
+1.retrieve top100 cities with largest GDP in China and store the data into sqlite database (100 records) => retrieve top20 cities(20 records)
+2.retrieve flight information in the Christmas week among all the cities according to the data from 1 (1.4w+ records) => retrieve the flight information from two cities to other cities( about 500 records)
+
+BTW, I have already retrieved all the data and due to my special case, if necessary, please contact me and I will send the file to you. I really appreciate your understanding.
+
+libraries needed:
+pip install requests
+pip install beautifulsoup4
+pip install retry
+pip install selenium
+pip install lxml
+pip install tqdm
+Here is another configuration need to be set up: chromedriver which in #48,#50 in city_scrape.py and #40 in flight_scrape.py 
+so this chromedriver has to be downloaded first and be set in the proper location and then selenium can use it.
+Mac's path is like /usr/local/Username/chromedriver
+Windows's path is like C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe'
+(BTW, if any abnormal output on the command line, that could be the driver's problem but it doesn't influence the function normally operating.)
+
+versions of the library:
+chardet-3.0.4 idna-2.8 requests-2.22.0 urllib3-1.25.7
+beautifulsoup4-4.8.1 soupsieve-1.9.5
+decorator-4.4.1 py-1.8.0 retry-0.9.2
+selenium-3.141.0
+lxml-4.4.1
+tqdm-4.32.1
+tqdm-4.39.0
+chromedriver 
+
+
+=============
+Q&A required:
+
+1. What are the strengths of your data modeling format?
+Here I use a lightweight database sqlite to model my data, which means I format my data into to tables. city and flight. In this way, I can 
+(1)access my data by SQL and don't have to repeatedly use IO stream often if I use other format style like csv file or pickle.
+(2)manage my data easily because sqlite has its own database management to make sure the data integrity and robustness, which means if want to add or remove any records, alter my data organization and index my data simultaneous, I don't have to consider about the safety and data distortion.
+(3)using sqlite means I only get a sing db file and it's very easy to configure.
+(4)It's very easy to code.
+ 
+2. What are the weaknesses? (Does your data model support? Sorting the information?
+(1)Sqlite is a lightweight database, indicating it cannot store large dataset, but when I check my complete data volume, it's only 1.6M, thus it's not a problem for this project.
+(2)For saving the time cost of connecting selecting, I used both column such as city_name in both tables, causing some redundancy.
+(3)Some information I scraped hasn't been used in this project.
+
+3. How do you store your data on disk?
+By a database file called "Flight.db".
+
+
+4. Let’s say you find another data source that relates to all 3 of your data sources (i.e. a
+data source that relates to your existing data). How would you extend your model to
+include this new data source? How would that change the interface?
+Actually the first 3 dataset I used is the geo-location dataset, city set and flight number set and I combine the first two sets into the city table, after consulting professor(he suggested me that I could add another set like demographic or car number set). I scraped my fourth dataset demographic and also put these data into the city table. What I used is the SQL syntax ---- altering the table and inserting values. If there are other data sets that I need, I can either create a new table or insert these data into the original table to make the data as several attributes.
+
+
+5. How would you add a new attribute to your data (i.e. imagine you had a lat/long column
+in a database. You might use that to access an API to get a city name. How would you add city name to your data?)
+Actually, I did that in my project, but what I did is first got the cities' name and use Google api to conduct geocoding to get the location attributes. The only thing I need to do to add a new attribute is to alter my table format and add a new column which signifies that attribute and insert the matching data into my table. 

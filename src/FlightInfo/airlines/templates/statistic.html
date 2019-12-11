@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style type="text/css">
+
+         html,body { height: 100%;margin: 0; padding: 0;overflow: hidden}
+
+
+ #first{
+      float: left;
+        /*display: inline-block;*/
+        width: 50%;
+        word-wrap: break-word;
+    }
+
+ #second{
+      float: left;
+        /*display: inline-block;*/
+        width: 50%;
+        word-wrap: break-word;
+    }
+#fourth {
+    /*display: inline-block;*/
+    float: right;
+    position: relative;
+    width: 50%;
+}
+
+#img1{
+    width:65%;
+}
+
+#img2{
+    width:60%;
+}
+#text{
+    text-align: left;
+    font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+    font-size: 100%;
+}
+
+
+</style>
+
+        <div id="first" style="height: 40%;width: 100% ;background: white;" >
+            <h3 style=" text-align:center">
+                   Analyze the relationship between GDP rank, population <br>
+                   and flight numbers in Chinese cities
+            </h3>
+            <h4 style=" text-align:center">
+                     ------ In Pearson’s Correlation
+            </h4>
+            </br>
+        <table class="table table-striped" ,border='1' cellpadding='3' style="width: 60%;margin:auto">
+        <thead>
+          <tr>
+            <th></th>
+            <th>GDP_rank Name</th>
+            <th>flight_num</th>
+            <th>population</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+              <td><b>GDP_rank</b></td>
+            <td>{{ gpd_gdp }} </td>
+            <td>{{ gpd_fli }}</td>
+            <td>{{ gpd_pop }}</td>
+          </tr>
+          <tr>
+            <td><b>flight_num</b></td>
+            <td>{{ gpd_fli }}</td>
+            <td>{{ fli_fli }}</td>
+            <td>{{ fli_pop }}</td>
+          </tr>
+          <tr>
+              <td><b>population</b></td>
+            <td>{{ gpd_pop }}</td>
+            <td>{{ fli_pop }}</td>
+            <td>{{ pop_pop }}</td>
+          </tr>
+        </tbody>
+      </table>
+        </div>
+
+        <div id="second" style="height: 60%;width: 50%;background: white; text-align:center">
+            <img id ='img1' src={% static 'img/heatmatrix.png'%}  > </img>
+        </div>
+
+
+    <div id="fourth" style="height: 60%;width: 50% ;background: white;text-align:center" >
+         <img id ='img2' src={% static 'img/coefficient.png'%} > </img>
+            <h4 >Conclusion:
+            </h4>
+        <div id = 'text'>
+         After calculating the Pearson's correlation coefficient for the variables in Chinese and querying Correlation Coefficient Table, we can conclude: <br>
+         &nbsp;(1) GDP rank has a strong negative relationship with flight numbers --- larger GPD , less flight numbers!! <br>
+         &nbsp;(2) GDP rank has a mild negative relationship with population       --- large GPD  , less population...    <br>
+        <div style='color: crimson'>&nbsp;<b>(3) Population  has a medium positive relationship with flight numbers ---- more people, more flights (which I think it's reasonable)</b></div>
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
