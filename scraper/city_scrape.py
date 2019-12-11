@@ -22,7 +22,7 @@ class City_scrape():
 
     def __init__(self,
                  city_url='https://www.chinacheckup.com/blogs/articles/china-city-economies',
-                 personal_key='AIzaSyB9BHmF9QSLCXk1H6p7vBU88rGtXQ340Ig',
+                 personal_key='xxxx',
                  db='test.db',
                  open_chrome=True,
                  data_volume='all'):
@@ -191,6 +191,6 @@ class City_scrape():
 if __name__ == '__main__':
 
     url = 'https://www.chinacheckup.com/blogs/articles/china-city-economies'
-    personal_key = 'AIzaSyB9BHmF9QSLCXk1H6p7vBU88rGtXQ340Ig'  # google API key
+    personal_key = '...'  # google API key
     test_instance = City_scrape(url,personal_key)
     test_instance.insert_to_tables()
