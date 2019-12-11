@@ -1,0 +1,27 @@
+body {
+  height: 100%;
+}
+
+.form-register {
+  width: 100%;
+  max-width: 350px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-register{
+  margin-top:80px;
+  font-weight: 400;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+
+form a{
+  display: inline-block;
+  margin-top:18px;
+  font-size: 16px;
+  line-height: 10px;
+}
