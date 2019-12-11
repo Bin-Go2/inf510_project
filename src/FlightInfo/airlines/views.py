@@ -300,8 +300,8 @@ def statistic(request):
 
 
 def register(request):
-    if request.session.get('is_login', None):
-        return redirect('/index/')
+    # if request.session.get('is_login', None):
+    #     return redirect('/index/')
 
     if request.method == 'POST':
         register_form = forms.RegisterForm(request.POST)
@@ -332,8 +332,8 @@ def register(request):
     return render(request, 'register.html', locals())
 
 def login(request):
-    if request.session.get('is_login', None):  # check the status, if already login then go to the index page
-        return redirect('/index/')
+    # if request.session.get('is_login', None):  # check the status, if already login then go to the index page
+    #     return redirect('/index/')
 
     if request.method == 'POST':
         login_form = forms.UserForm(request.POST)
