@@ -49,3 +49,12 @@ then open the notebook `zhang_bin.ipynb`
 
 
 
+Here is the visulation result:
+
+![image](https://github.com/SondersB/inf510_project/blob/master/src/FlightInfo/airlines/static/img/1.png)
+![image](https://github.com/SondersB/inf510_project/blob/master/src/FlightInfo/airlines/static/img/2.png)
+![image](https://github.com/SondersB/inf510_project/blob/master/src/FlightInfo/airlines/static/img/3.png)
+![image](https://github.com/SondersB/inf510_project/blob/master/src/FlightInfo/airlines/static/img/4.png)
+![image](https://github.com/SondersB/inf510_project/blob/master/src/FlightInfo/airlines/static/img/5.png)
+![image](https://github.com/SondersB/inf510_project/blob/master/src/FlightInfo/airlines/static/img/6.png)
+
