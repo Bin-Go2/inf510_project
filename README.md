@@ -25,6 +25,7 @@ Here is how to run this project:
 go to the project path `/inf510_project/src/scraper` 
 
 then use command line
+
 `python BIN_ZHANG_hw5.py -source=test`
 
 `python BIN_ZHANG_hw5.py -source=remote`
