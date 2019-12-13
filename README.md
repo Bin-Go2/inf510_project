@@ -49,7 +49,7 @@ then open the notebook `zhang_bin.ipynb`
 
 
 
-Here is the visulation result:
+Here is the visualization result:
 
 ![image](https://github.com/SondersB/inf510_project/blob/master/src/FlightInfo/airlines/static/img/1.png)
 ![image](https://github.com/SondersB/inf510_project/blob/master/src/FlightInfo/airlines/static/img/2.png)
