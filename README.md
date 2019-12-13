@@ -23,17 +23,25 @@ In the second part, I build a lightweight website by django, and by taking advan
 Here is how to run this project:
 
 1.data collection:<br>
-go to the project path `/inf510_project/src/scraper`  and use command line <br>
+go to the project path `/inf510_project/src/scraper` 
+
+then use command line 
+
 `python BIN_ZHANG_hw5.py -source=remote`
+
 `python BIN_ZHANG_hw5.py -source=local`
+
 `python BIN_ZHANG_hw5.py -source=test`
 
 ##### hint:  Cause I use the google api and when I published my project to Github, Github sent me a warning letter and ask me to delete it, so if you want to run these code, please add your own google api key or use my homework5's project. 
  
 2.data visualization:<br>
-(1) go to the project path `/inf510_project/src/FlightInfo`  and use command line <br>
-`python manage.py runserver`
+(1) go to the project path `/inf510_project/src/FlightInfo`
+  
+then use command line `python manage.py runserver`
 
-(2) go to the project path `/inf510_project` and use the command line <br>
-`jupyter notebook`
-then open the notebook 'zhang_bin.ipynb' 
+(2) go to the project path `/inf510_project` 
+
+then use the command line  `jupyter notebook`
+
+then open the notebook `zhang_bin.ipynb`
