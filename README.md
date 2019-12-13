@@ -1,11 +1,10 @@
-## INF510 Project desription
+## INF510 Project description
 
-### Here is a the final project for INF510. It is a project about web scraping and django.
+### Here is a the final project for INF510. It is a project about data scraping and visualization.
 
 This porject has two main parts:
 1. data collecting: spider
 2. visualization: FlightInfo
-
 
 ***
 
@@ -25,23 +24,28 @@ Here is how to run this project:
 1.data collection:<br>
 go to the project path `/inf510_project/src/scraper` 
 
-then use command line 
+then use command line
+`python BIN_ZHANG_hw5.py -source=test`
 
 `python BIN_ZHANG_hw5.py -source=remote`
 
 `python BIN_ZHANG_hw5.py -source=local`
 
-`python BIN_ZHANG_hw5.py -source=test`
 
-##### hint:  Cause I use the google api and when I published my project to Github, Github sent me a warning letter and ask me to delete it, so if you want to run these code, please add your own google api key or use my homework5's project. 
+##### hint:  Cause I use the google api and when I published my project to Github, Github sent me a warning letter and ask me to delete it, so if you want to run these code, please add it in city_scarpe.py.
  
 2.data visualization:<br>
-(1) go to the project path `/inf510_project/src/FlightInfo`
+2.1 go to the project path `/inf510_project/src/FlightInfo`
   
 then use command line `python manage.py runserver`
 
-(2) go to the project path `/inf510_project` 
+2.2 go to the project path `/inf510_project` 
 
 then use the command line  `jupyter notebook`
 
 then open the notebook `zhang_bin.ipynb`
+
+#### (Explanation)There is a little difference between my project paths and professor's requriment(cause my project needs to be located as the framework asked) . And I asked professor and got his permission. He asked me to explain it in the README and notebook.
+
+
+
